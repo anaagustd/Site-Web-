@@ -1,9 +1,8 @@
-# Página pessoal — Fulano de Tal
+# Página pessoal — Ana Clara 
 
 **Assunto:** a página pessoal de um estudante de Sistemas de Informação, onde
-quem chega vê quem ele é, o que ele estuda, os horários do semestre e como
+quem chega vê quem ela é, o que ela estuda, os horários do semestre e como
 entrar em contato.
-**Equipe:** Fulano de Tal (líder) · Beatriz Andrade Lima · Carlos Nogueira Reis · Daniela Prado Vieira · Eduardo Salles Campos · Fernanda Toledo Ramos
 **Disciplina:** ARA0062 — Desenvolvimento Web em HTML5, CSS, JavaScript e PHP
 **Centro Universitário Newton Paiva · 2026/2**
 
@@ -89,19 +88,6 @@ receber os dados. O aviso diz se eles passariam.
 **Console conferido** no Chrome e no Firefox, com `Ctrl + F5`: nenhuma
 mensagem de erro ao carregar, ao trocar o tema, ao digitar a mensagem, ao
 trocar o assunto e ao enviar com cada uma das regras quebrada.
-
----
-
-## Quem fez o quê
-
-| Integrante | Parte |
-|---|---|
-| Fulano de Tal | o evento `submit`, o `preventDefault` e o `<p id="aviso">` |
-| Beatriz Andrade Lima | a regra do tamanho do nome, com `trim` e `\|\|` |
-| Carlos Nogueira Reis | a regra da proposta de trabalho, com `&&` |
-| Daniela Prado Vieira | a dica da mensagem, com `switch` |
-| Eduardo Salles Campos | a função `temNumero`, com `for` e `break`, e os espaços duplos, com `while` |
-| Fernanda Toledo Ramos | os testes: cada regra quebrada de propósito, em dois navegadores, e a seção JavaScript deste README |
 
 ---
 
