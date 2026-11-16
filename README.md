@@ -1,10 +1,19 @@
-# Página pessoal — Ana Clara 
+# Página pessoal — Fulano de Tal
 
-**Assunto:** a página pessoal de uma estudante de Sistemas de Informação, onde
-quem chega vê quem ela é, o que ela estuda, os horários do semestre e como
+**Assunto:** a página pessoal de um estudante de Sistemas de Informação, onde
+quem chega vê quem ele é, o que ele estuda, os horários do semestre e como
 entrar em contato.
+**Equipe:** Fulano de Tal (líder) · Beatriz Andrade Lima · Carlos Nogueira Reis · Daniela Prado Vieira · Eduardo Salles Campos · Fernanda Toledo Ramos
 **Disciplina:** ARA0062 — Desenvolvimento Web em HTML5, CSS, JavaScript e PHP
 **Centro Universitário Newton Paiva · 2026/2**
+
+> **Este é o ponto de partida da aula 08** — a página de exemplo exatamente
+> como ficou no fim da aula 07, com as sete práticas de validação feitas e o
+> envio **sempre cancelado**, porque ainda não há servidor. Use-o se a sua
+> cópia não estiver funcionando ou se você faltou à aula 07.
+>
+> O gabarito da aula 08 é o `02-projeto`. Não trabalhe nele: confira o seu
+> **no fim**.
 
 ---
 
@@ -83,6 +92,29 @@ trocar o assunto e ao enviar com cada uma das regras quebrada.
 
 ---
 
+## Quem fez o quê
+
+| Integrante | Parte |
+|---|---|
+| Fulano de Tal | o evento `submit`, o `preventDefault` e o `<p id="aviso">` |
+| Beatriz Andrade Lima | a regra do tamanho do nome, com `trim` e `\|\|` |
+| Carlos Nogueira Reis | a regra da proposta de trabalho, com `&&` |
+| Daniela Prado Vieira | a dica da mensagem, com `switch` |
+| Eduardo Salles Campos | a função `temNumero`, com `for` e `break`, e os espaços duplos, com `while` |
+| Fernanda Toledo Ramos | os testes: cada regra quebrada de propósito, em dois navegadores, e a seção JavaScript deste README |
+
+---
+
+## Como abrir
+
+1. Abra **a pasta `04-projeto` inteira** no VS Code (*Arquivo → Abrir Pasta*),
+   não só o `frontend/`.
+2. Abra `frontend/index.html` e clique em **Go Live** (extensão Live Server).
+3. Abra o DevTools (`F12`) na aba **Console**: a primeira linha deve ser
+   *O script.js está ligado.*
+
+---
+
 ## A estrutura
 
 ```
@@ -104,3 +136,34 @@ trocar o assunto e ao enviar com cada uma das regras quebrada.
 ```
 
 ---
+
+# Notas da aula
+
+*Esta seção não faz parte do modelo de folha de rosto — ela existe porque este
+repositório é material didático. O README de vocês termina na estrutura.*
+
+## O que mudou da aula 06 para a aula 07
+
+| Arquivo | O que mudou |
+|---|---|
+| `frontend/index.html` | só o `<p id="aviso">`, no fim do formulário |
+| `frontend/css/estilo.css` | só a seção 10, com `.aviso` e `.aviso:empty` |
+| `frontend/css/tema-noite.css` | **nada** |
+| `frontend/js/script.js` | as seções 6 e 7; as seções 1 a 5 não mudaram uma linha |
+
+## As quatro armadilhas que este gabarito evita
+
+1. **O `evento` que não chegou.** `function conferirFormulario(evento)` recebe
+   o evento entre os parênteses. Sem ele, a linha do `preventDefault` dá
+   *evento is not defined* — e, como o erro acontece antes do cancelamento, a
+   página recarrega e o aviso some antes de qualquer um ler.
+2. **O `break` esquecido no `switch`.** Sem ele, o caso de cima escorre para o
+   de baixo: quem escolhe *Uma dúvida* vê a dica da proposta de trabalho. Não
+   aparece erro nenhum no Console.
+3. **O `const` que o `while` precisa trocar.** O nome é `let` porque o `while`
+   o reescreve a cada volta. Com `const`, o Console diz *Assignment to
+   constant variable* no primeiro nome com espaço duplo.
+4. **O índice que começa em zero.** O `for` vai de `i = 0` até
+   `i < texto.length`, com `<` e não `<=`. Com `<=`, a última volta lê
+   `texto[texto.length]`, que não existe: o resultado é `undefined`, sem erro
+   — e a regra fica errada em silêncio.
